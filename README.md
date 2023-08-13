@@ -44,8 +44,8 @@ The project aims to create a robust backend system that facilitates user registr
 
 ## API Endpoints
 
-- **POST /register**: Register a new user.
-- **GET /confirm/{token}**: Verify the email address by confirming the token.
+- **POST /api/v1/registration: Register a new user.
+- **GET /api/v1/registration/confirm?token=your_verification_token: Verify the email address by confirming the token.
 
 ## Validation
 
