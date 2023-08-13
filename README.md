@@ -1,9 +1,54 @@
-# User-Login-and-Registration-Backened-Email-Verification
-* Developed a robust backend system using Java Spring Boot framework, enabling user registration and authentication functionalities. Leveraged PostgreSQL database for seamless data storage.
-* Implemented a user-friendly registration process, allowing open access through a POST endpoint. Utilized Spring MVC architecture for handling registration requests (POSTMapping).
-* Designed and managed the database schema, comprising 'Appuser' and 'ConfirmationToken' tables, utilizing Spring JPA for efficient data persistence.
-* Orchestrated a secure email verification process, involving the generation of tokens and sending verification emails using CURL email service.
-* Enforced a stringent time constraint of 15 minutes for email verification, expiring the token upon lapse. Ensured robustness through token expiration logic.
-* Strengthened system security by incorporating Spring Security mechanisms, securing the primary localhost page. Authenticated users gained exclusive access post email verification.
-* Validated the system's API endpoints using Postman, covering essential scenarios such as user registration through POSTMapping and token verification via getMapping.
-By skillfully combining Java Spring Boot, PostgreSQL, Spring JPA, Spring Security, and Postman testing, the backend system enabled smooth user registration, verification, and access control, contributing to a seamless user experience. This comprehensive approach underscores your commitment to quality assurance and thorough testing.
+# User Registration and Authentication System
+
+This project demonstrates the development of a user registration and authentication system using Java Spring Boot, Spring JPA, Spring Security, and PostgreSQL. The system provides a secure and user-friendly way for users to register, verify their email addresses, and gain access to authenticated features.
+
+## Technologies Used
+
+- Java
+- Spring Boot
+- Spring JPA (Java Persistence API)
+- Spring Security
+- PostgreSQL
+
+## Project Overview
+
+The project aims to create a robust backend system that facilitates user registration, email verification, and secure authentication. It involves the following components:
+
+### User Registration
+
+- Implemented a user-friendly registration process using a POST endpoint.
+- Leveraged Spring MVC architecture to handle registration requests.
+- Utilized Spring JPA to manage the database schema, including the 'Appuser' and 'ConfirmationToken' tables.
+
+### Email Verification
+
+- Developed a secure email verification process with token generation.
+- Utilized an external CURL email service to send verification emails.
+- Enforced a strict 15-minute time constraint for email verification using token expiration logic.
+
+### Secure Authentication
+
+- Incorporated Spring Security mechanisms to enhance system security.
+- Ensured authenticated users gain exclusive access to authenticated features post email verification.
+
+## Usage
+
+1. Clone the repository to your local machine.
+2. Configure your PostgreSQL database settings in the `application.properties` file.
+3. Run the Spring Boot application.
+4. Access the application through the primary localhost page.
+5. Register as a new user, following the user-friendly registration process.
+6. Receive a verification email with a generated token for email confirmation.
+7. Verify your email address within the stipulated time (15 minutes) by clicking the provided link.
+8. Gain access to authenticated features upon successful verification.
+
+## API Endpoints
+
+- **POST /register**: Register a new user.
+- **GET /confirm/{token}**: Verify the email address by confirming the token.
+
+## Validation
+
+The system's API endpoints have been thoroughly validated using tools like Postman. Essential scenarios, such as user registration via POSTMapping and token verification via getMapping, have been covered to ensure the robustness and reliability of the system.
+
+
